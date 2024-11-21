@@ -2,13 +2,86 @@
 <html>
 <head>
     <title>Upload File</title>
+    <style>
+        /* Styling for the page background and container */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0'); /* Background image of space */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+        
+        /* Container box styling */
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black for contrast */
+            padding: 40px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling for form heading */
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Label and file input styling */
+        label {
+            font-weight: bold;
+            color: #cccccc;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #1E90FF; /* Light blue for button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #1C86EE;
+            transform: translateY(-3px);
+        }
+
+        /* Button active (pressed) effect */
+        button:active {
+            background-color: #187bcd;
+            transform: translateY(1px);
+        }
+    </style>
 </head>
 <body>
-    <h1>Upload a File</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Choose file:</label>
-        <input type="file" id="file" name="file" required>
-        <button type="submit">Upload</button>
-    </form>
+    <div class="container">
+        <h1>Upload a File</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Choose file:</label><br>
+            <input type="file" id="file" name="file" required><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
 </body>
 </html>
