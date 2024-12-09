@@ -77,14 +77,14 @@ def fill_form(fields):
        
         if 'Phone' in fields:
             try:
-                phone_field = driver.find_element(By.XPATH, "//input[@type='tel']")  # Adjust selector as needed
+                phone_field = driver.find_element(By.XPATH, "//input[@type='tel']") 
                 phone_field.send_keys(fields['Phone'])
             except NoSuchElementException:
                 print("Phone field not found.")
 
         if 'Email' in fields:
             try:
-                email_field = driver.find_element(By.XPATH, "//textarea[@aria-labelledby='i1 i4']")  # Adjust based on actual attributes
+                email_field = driver.find_element(By.XPATH, "//textarea[@aria-labelledby='i1 i4']") 
                 email_field.send_keys(fields['Email'])
             except NoSuchElementException:
                 print("Email field not found.")
